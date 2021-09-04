@@ -7,7 +7,7 @@ import { fetchTimeSeries } from "../actions/timeseries";
 function App(props) {
 	const { dispatch } = props;
 	const { metrics } = props.metrics;
-	const { timeseries } = props.timeseries;
+	const { timeseries, isLoading } = props.timeseries;
 	const [toMeasure, setToMeasure] = useState("");
 	let typesOfMetrics = [];
 
@@ -23,6 +23,8 @@ function App(props) {
 	metrics && metrics.forEach((m) => typesOfMetrics.push(m.measure));
 	// remove duplicate measure values
 	typesOfMetrics = [...new Set(typesOfMetrics)];
+
+	console.log("check", isLoading);
 
 	return (
 		<div>
@@ -46,7 +48,13 @@ function App(props) {
 				</div>
 			</div>
 
-			{toMeasure && timeseries && (
+			{isLoading && (
+				<div className="loader">
+					<img src="https://amirk1711.github.io/SampleImages/loader.gif" alt="loader" />
+				</div>
+			)}
+
+			{toMeasure && timeseries && !isLoading && (
 				<div className="heading-graph-container">
 					<p className="trends">
 						See the trends for <em>{toMeasure}</em>

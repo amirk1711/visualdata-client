@@ -7,6 +7,10 @@ body {
 	background-color: #242424;
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
@@ -86,4 +90,11 @@ code {
 	width: 96vw;
 	display: flex;
 	justify-content: center;
+}
+
+.loader {
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
