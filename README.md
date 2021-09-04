@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## See it in the action
+
+[https://visualisedata.herokuapp.com/](https://visualisedata.herokuapp.com/)
+
+## To run this app on a local machine
+
+Clone this repository by running `https://github.com/amirk1711/visualdata-client.git`.\
+Go to that directory where you cloned this repository.\
+Install all the dependencies by running the command: `npm install`.\
+Run command: `npm start` to start the app.
+If it is not already started, manually visit `http://localhost:3000` in the browser to see the app.
+
 ## Available Scripts
 
 In the project directory, you can run:
