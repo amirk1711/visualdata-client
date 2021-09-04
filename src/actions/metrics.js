@@ -2,7 +2,7 @@ import { FETCH_METRICS_FAILED, FETCH_METRICS_START, FETCH_METRICS_SUCCESS } from
 
 export function fetchMetrics() {
 	return (dispatch) => {
-		const url = "/api/metrics";
+		const url = "https://visualisedata-server.herokuapp.com/api/metrics";
 		dispatch(fetchMetricsStart());
 		fetch(url, {
 			method: "GET",

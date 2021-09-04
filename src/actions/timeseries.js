@@ -6,7 +6,7 @@ import {
 
 export function fetchTimeSeries(metricId) {
 	return (dispatch) => {
-		const url = `/api/metrics/${metricId}`;
+		const url = `https://visualisedata-server.herokuapp.com/api/metrics/${metricId}`;
 		dispatch(fetchTimeSeriesStart());
 		fetch(url, {
 			method: "GET",
