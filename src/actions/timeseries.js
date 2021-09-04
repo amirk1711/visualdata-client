@@ -10,6 +10,7 @@ export function fetchTimeSeries(metricId) {
 		dispatch(fetchTimeSeriesStart());
 		fetch(url, {
 			method: "GET",
+            mode: 'cors',
 		})
 			.then((response) => response.json())
 			.then((data) => {
