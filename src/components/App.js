@@ -29,7 +29,7 @@ function App(props) {
 	return (
 		<div>
 			<div className="option-container">
-				<p className="choice-text">What you want to measure ?</p>
+				<p className="choice-text">What do you want to measure ?</p>
 
 				<div>
 					{typesOfMetrics &&
